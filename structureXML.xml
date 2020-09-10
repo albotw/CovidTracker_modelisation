@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<!DOCTYPE structureXML SYSTEM "structureXML.dtd">
 <meta>
 
     <departement></departement>
@@ -8,7 +8,7 @@
 </meta>
 
 <data>
-    <nombre_tests>
+    <tests>
 
         <total></total>
         <taux></taux>
@@ -23,7 +23,7 @@
             <positifs></positifs>
         </femmes>
 
-    </nombre_tests>
+    </tests>
 
     <hospitalises>
 
@@ -35,7 +35,7 @@
             <nouveaux>35</nouveaux>
         </reanimation>
 
-        <retour_domicile>
+        <retour_domicile global="yes">
             <total></total>
             <nouveaux></nouveaux>
         </retour_domicile>
@@ -46,4 +46,21 @@
         </decede>
 
     </hospitalises>
+
+    <transferts>
+
+        <depart>
+            <region></region>
+            <date></date>
+        </depart>
+
+        <arrivee>
+            <region></region>
+            <date></date>
+        </arrivee>
+
+        <vecteur></vecteur>
+        <nb_patients></nb_patients>
+
+    </transferts>
 </data>

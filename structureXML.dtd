@@ -1,0 +1,43 @@
+<!DOCTYPE structureXML
+[
+
+<!ELEMENT meta ()>
+<!ELEMENT region ()>
+<!ELEMENT departement ()>
+<!ELEMENT date ()>
+
+<!ELEMENT data ()>
+<!ELEMENT tests ()>
+<!ELEMENT total ()>
+<!ELEMENT taux ()>
+<!ELEMENT hommes ()>
+<!ELEMENT positifs ()>
+<!ELEMENT femmes ()>
+
+<!ELEMENT hospitalisation ()>
+<!ELEMENT nouveaux_cas ()>
+
+<!ELEMENT reanimation ()>
+<!ATTLIST reanimation tranche_age () # >
+<!ATTLIST reanimation region () # >
+<!ATTLIST reanimation global () # >
+
+<!ELEMENT nouveaux ()>
+
+<!ELEMENT retour_domicile ()>
+<!ATTLIST retour_domicile tranche_age () # >
+<!ATTLIST retour_domicile region () # >
+<!ATTLIST retour_domicile global () # >
+
+<!ELEMENT decede ()>
+<!ATTLIST decede tranche_age () # >
+<!ATTLIST decede region () # >
+<!ATTLIST decede global () # >
+
+<!ELEMENT transferts ()>
+<!ELEMENT depart ()>
+<!ELEMENT arrivee ()>
+<!ELEMENT vecteur ()>
+<!ELEMENT nb_patients ()>
+
+]>
