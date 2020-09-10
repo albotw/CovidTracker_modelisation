@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<meta>
+
+    <departement></departement>
+    <date></date>
+
+</meta>
+
+<data>
+    <nombre_tests>
+
+        <total></total>
+        <taux></taux>
+
+        <hommes>
+            <total></total>
+            <positifs></positifs>
+        </hommes>
+
+        <femmes>
+            <total></total>
+            <positifs></positifs>
+        </femmes>
+
+    </nombre_tests>
+
+    <hospitalises>
+
+        <total></total>
+        <nouveaux_cas></nouveaux_cas>
+
+        <reanimation tranche_age="18-25" region="45">
+            <total>7600</total>
+            <nouveaux>35</nouveaux>
+        </reanimation>
+
+        <retour_domicile>
+            <total></total>
+            <nouveaux></nouveaux>
+        </retour_domicile>
+
+        <decede>
+            <total></total>
+            <nouveaux></nouveaux>
+        </decede>
+
+    </hospitalises>
+</data>

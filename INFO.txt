@@ -1,0 +1,96 @@
+Cahier des charges:
+    - suivi de la variation quotidiène du nombre de décès
+    -                                            de personnes hospitalisées
+    -                                            de personnes en réanimation
+    -                                            de décès
+    -                                            de retours au domicile.
+
+    - Taux de reproduction R du virus
+    - nombre de test pratiqués
+    - nombre de tests positifs
+    
+    Tout ça a l'échelle Nationale, Régionnale, Départementale
+
+UML:
+    - diagramme Use Case 1er niveau (fonctionnalités générales)
+    - détail des infos pour chacune des fonctionnalités (relations et classes) (déterminer la persistance).
+    - justifier dessus + explications.
+    - vérifier formes normales. et relations.
+
+
+Contenu dossier:
+    - explication des diagrammes.
+    - description complète d'au moins une fonctionnalité
+    - conclusion avec explication du travail et limites du diagramme.
+
+
+XML:
+    - pour chaque application proposer des fichiers XML, leurs DTD et les requêtes XPath associées
+
+============================================================================================================
+============================================================================================================
+============================================================================================================
+
+
+Données dans le fichier XML:
+pour les tests:
+    département (entier)
+    date
+    nombre de tests (entier)
+    nombre de tests positifs
+    nombre de tests hommes
+    nombre de tests hommes positifs
+    nombre de tests femme
+    nombre de tests femme positifs
+
+Pour les tests 2:
+    departement
+    jour
+    tranche d'age
+    nombre de tests
+    nombres de positifs
+    taux de positifs
+    nombre de tests hommes
+    nombre de positifs hommes
+    nombre de tests femme
+    nombre de positifs femme
+
+pour la charge des hopitaux
+    departement
+    sexe
+    jour
+    hospitalisés
+        en réanimation
+        en retour à domicile
+        en décédées.
+
+pour les nouveaux cas
+    departement 
+    date
+    nouveaux cas hospitalisés
+        en reanimation
+        en retour a domicile
+        en décédées
+
+Pour les classes d'ages
+    région
+    classe d'age
+    jour
+    hospitalisés
+    en réanimation
+    retour a domicile
+    décédés
+
+nouveaux cas cumulés
+    département
+    jour
+    nombre de services hospitaliers ayant déclarés au moins un cas.
+
+pour les transferts de patients:
+    debut transfert(date)
+    fin transfert(date)
+    type vecteur (avion / voiture, etc..)
+    region de depart
+    region d'arrivée
+    pays d'arrivee
+    nombre de patients.
