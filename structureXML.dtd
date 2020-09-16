@@ -1,21 +1,21 @@
 <!DOCTYPE structureXML
 [
 
-<!ELEMENT meta ()>
-<!ELEMENT region ()>
-<!ELEMENT departement ()>
-<!ELEMENT date ()>
+<!ELEMENT meta (departement, date)>
+<!ELEMENT region (#PCDATA)>
+<!ELEMENT departement (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
 
-<!ELEMENT data ()>
-<!ELEMENT tests ()>
-<!ELEMENT total ()>
-<!ELEMENT taux ()>
-<!ELEMENT hommes ()>
-<!ELEMENT positifs ()>
-<!ELEMENT femmes ()>
+<!ELEMENT data (tests, hospitalises)>
+<!ELEMENT tests (total, taux, hommes, femmes)>
+<!ELEMENT total (#PCDATA)>
+<!ELEMENT taux (#PCDATA)>
+<!ELEMENT hommes (total, positifs)>
+<!ELEMENT positifs (#PCDATA)>
+<!ELEMENT femmes (total, positifs)>
 
-<!ELEMENT hospitalisation ()>
-<!ELEMENT nouveaux_cas ()>
+<!ELEMENT hospitalisation (total, nouveaux_cas, reanimation? retour_domicile? decede?)>
+<!ELEMENT nouveaux_cas (#PCDATA)>
 
 <!ELEMENT reanimation ()>
 <!ATTLIST reanimation tranche_age () # >
