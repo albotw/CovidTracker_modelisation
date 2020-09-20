@@ -17,27 +17,27 @@
 <!ELEMENT hospitalisation (total, nouveaux_cas, reanimation? retour_domicile? decede?)>
 <!ELEMENT nouveaux_cas (#PCDATA)>
 
-<!ELEMENT reanimation ()>
-<!ATTLIST reanimation tranche_age () # >
-<!ATTLIST reanimation region () # >
-<!ATTLIST reanimation global () # >
+<!ELEMENT reanimation (#PCDATA)>
+<!ATTLIST reanimation tranche_age (CDATA) #IMPLIED >
+<!ATTLIST reanimation region (CDATA) #IMPLIED >
+<!ATTLIST reanimation global (CDATA) #IMPLIED >
 
-<!ELEMENT nouveaux ()>
+<!ELEMENT nouveaux (#PCDATA)>
 
-<!ELEMENT retour_domicile ()>
-<!ATTLIST retour_domicile tranche_age () # >
-<!ATTLIST retour_domicile region () # >
-<!ATTLIST retour_domicile global () # >
+<!ELEMENT retour_domicile (#PCDATA)>
+<!ATTLIST retour_domicile tranche_age (CDATA) #IMPLIED >
+<!ATTLIST retour_domicile region (CDATA) #IMPLIED >
+<!ATTLIST retour_domicile global (CDATA) #IMPLIED >
 
-<!ELEMENT decede ()>
-<!ATTLIST decede tranche_age () # >
-<!ATTLIST decede region () # >
-<!ATTLIST decede global () # >
+<!ELEMENT decede (#PCDATA)>
+<!ATTLIST decede tranche_age (CDATA) #IMPLIED >
+<!ATTLIST decede region (CDATA) #IMPLIED >
+<!ATTLIST decede global (CDATA) #IMPLIED >
 
-<!ELEMENT transferts ()>
-<!ELEMENT depart ()>
-<!ELEMENT arrivee ()>
-<!ELEMENT vecteur ()>
-<!ELEMENT nb_patients ()>
+<!ELEMENT transferts (depart, arrivee, vecteur?, nb_patients)>
+<!ELEMENT depart (region, date)>
+<!ELEMENT arrivee (region, date)>
+<!ELEMENT vecteur (#PCDATA)>
+<!ELEMENT nb_patients (#PCDATA)>
 
 ]>
