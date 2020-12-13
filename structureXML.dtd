@@ -1,33 +1,28 @@
-<!DOCTYPE structureXML
-[
-
+<?xml version="1.0" encoding="UTF-8"?>
 <!ELEMENT data              (date, tests, hospitalises)>
 <!ELEMENT date              (#PCDATA)>
-<!ELEMENT tests             (localisation?)>
-<!ELEMENT hospitalises      (reanimation? retour_domicile? decede?)>
-<!ELEMENT tests             (localisation?)>
-<!ELEMENT localisation      (positifs, total)>
+<!ELEMENT tests             (test+)>
+<!ELEMENT hospitalises      (reanimation+, retour_domicile+, decede+)>
+<!ELEMENT test              (positifs, total)>
 <!ELEMENT positifs          (#PCDATA)>
 <!ELEMENT nouveaux          (#PCDATA)>
 <!ELEMENT total             (#PCDATA)>
-<!ELEMENT reanimation       (nouveaux, total)>
-<!ELEMENT retour_domicile   (nouveaux, total)>
-<!ELEMENT decede            (nouveaux, total)>
+<!ELEMENT reanimation       (total, nouveaux)>
+<!ELEMENT retour_domicile   (total, nouveaux)>
+<!ELEMENT decede            (total, nouveaux)>
 
-<!ATTLIST tests scale                   (france|departement|region) #REQUIRED>
-<!ATTLIST tests region                  (CDATA) #IMPLIED>
-<!ATTLIST tests departement             (CDATA) #IMPLIED>
+<!ATTLIST test scale            (france|departement|region) #REQUIRED>
+<!ATTLIST test region           CDATA #IMPLIED>
+<!ATTLIST test departement      CDATA #IMPLIED>
 
 <!ATTLIST reanimation scale             (france|departement|region) #REQUIRED >
-<!ATTLIST reanimation region            (CDATA) #IMPLIED >
-<!ATTLIST reanimation departement       (CDATA) #IMPLIED>
+<!ATTLIST reanimation region            CDATA #IMPLIED >
+<!ATTLIST reanimation departement       CDATA #IMPLIED >
 
 <!ATTLIST retour_domicile scale         (france|departement|region) #REQUIRED >
-<!ATTLIST retour_domicile region        (CDATA) #IMPLIED >
-<!ATTLIST retour_domicile departement   (CDATA) #IMPLIED >
+<!ATTLIST retour_domicile region        CDATA #IMPLIED >
+<!ATTLIST retour_domicile departement   CDATA #IMPLIED >
 
-<!ATTLIST decede scale                  (france|departement|region) #REQUIRED >
-<!ATTLIST decede region                 (CDATA) #IMPLIED >
-<!ATTLIST decede global                 (CDATA) #IMPLIED >
-
-]>
+<!ATTLIST decede scale         (france|departement|region) #REQUIRED >
+<!ATTLIST decede region        CDATA #IMPLIED >
+<!ATTLIST decede departement   CDATA #IMPLIED >

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE structureXML SYSTEM "structureXML.dtd">
+<!DOCTYPE data SYSTEM 'structureXML.dtd'>
 <data>
     <date>12/12/2020</date>
 
     <tests>
-        <localisation scale="region" region="FR-CVL">
+        <test scale="region" region="FR-CVL">
             <positifs>190</positifs>
             <total>1400</total>
-        </localisation>
+        </test>
 
-        <localisation scale="france">
+        <test scale="france">
             <positifs>54110</positifs>
             <total>140000</total>
-        </localisation>
+        </test>
 
-        <localisation scale="departement" departement="58">
+        <test scale="departement" departement="58">
             <positifs>400</positifs>
             <total>1000</total>
-        </localisation>
+        </test>
     </tests>
 
     <hospitalises>

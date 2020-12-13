@@ -1,0 +1,27 @@
+- récupérer la date
+//date
+
+- granularité
+//*[@scale="france"]
+//*[@scale="departement"]
+//*[@scale="region"]
+
+- valeur spécifique pour une région / département
+//test[@departement="58"]/text()
+//reanimation[@region="FR-ARA"]/text()
+//decede[@departement="21"]/text()
+
+- nouveaux cas pour une valeur
+//reanimation/nouveaux/text()
+
+- cas totaux pour une valeur
+//retour_domicile/total/text()
+
+- cas totaux pour une valeur pour un departement
+//reanimation[@region="FR-ARA"]/total/text()
+
+- cas totaux pour une valeur pour tous les départements
+//reanimation[@scale="region"]/total/text()
+
+- nombre de cas positifs à l'échelle de la france
+//test[@scale="france"]/total/text()
