@@ -1,43 +1,33 @@
 <!DOCTYPE structureXML
 [
 
-<!ELEMENT meta (departement, date)>
-<!ELEMENT region (#PCDATA)>
-<!ELEMENT departement (#PCDATA)>
-<!ELEMENT date (#PCDATA)>
+<!ELEMENT data              (date, tests, hospitalises)>
+<!ELEMENT date              (#PCDATA)>
+<!ELEMENT tests             (localisation?)>
+<!ELEMENT hospitalises      (reanimation? retour_domicile? decede?)>
+<!ELEMENT tests             (localisation?)>
+<!ELEMENT localisation      (positifs, total)>
+<!ELEMENT positifs          (#PCDATA)>
+<!ELEMENT nouveaux          (#PCDATA)>
+<!ELEMENT total             (#PCDATA)>
+<!ELEMENT reanimation       (nouveaux, total)>
+<!ELEMENT retour_domicile   (nouveaux, total)>
+<!ELEMENT decede            (nouveaux, total)>
 
-<!ELEMENT data (tests, hospitalises)>
-<!ELEMENT tests (total, taux, hommes, femmes)>
-<!ELEMENT total (#PCDATA)>
-<!ELEMENT taux (#PCDATA)>
-<!ELEMENT hommes (total, positifs)>
-<!ELEMENT positifs (#PCDATA)>
-<!ELEMENT femmes (total, positifs)>
+<!ATTLIST tests scale                   (france|departement|region) #REQUIRED>
+<!ATTLIST tests region                  (CDATA) #IMPLIED>
+<!ATTLIST tests departement             (CDATA) #IMPLIED>
 
-<!ELEMENT hospitalisation (total, nouveaux_cas, reanimation? retour_domicile? decede?)>
-<!ELEMENT nouveaux_cas (#PCDATA)>
+<!ATTLIST reanimation scale             (france|departement|region) #REQUIRED >
+<!ATTLIST reanimation region            (CDATA) #IMPLIED >
+<!ATTLIST reanimation departement       (CDATA) #IMPLIED>
 
-<!ELEMENT reanimation (#PCDATA)>
-<!ATTLIST reanimation tranche_age (CDATA) #IMPLIED >
-<!ATTLIST reanimation region (CDATA) #IMPLIED >
-<!ATTLIST reanimation global (CDATA) #IMPLIED >
+<!ATTLIST retour_domicile scale         (france|departement|region) #REQUIRED >
+<!ATTLIST retour_domicile region        (CDATA) #IMPLIED >
+<!ATTLIST retour_domicile departement   (CDATA) #IMPLIED >
 
-<!ELEMENT nouveaux (#PCDATA)>
-
-<!ELEMENT retour_domicile (#PCDATA)>
-<!ATTLIST retour_domicile tranche_age (CDATA) #IMPLIED >
-<!ATTLIST retour_domicile region (CDATA) #IMPLIED >
-<!ATTLIST retour_domicile global (CDATA) #IMPLIED >
-
-<!ELEMENT decede (#PCDATA)>
-<!ATTLIST decede tranche_age (CDATA) #IMPLIED >
-<!ATTLIST decede region (CDATA) #IMPLIED >
-<!ATTLIST decede global (CDATA) #IMPLIED >
-
-<!ELEMENT transferts (depart, arrivee, vecteur?, nb_patients)>
-<!ELEMENT depart (region, date)>
-<!ELEMENT arrivee (region, date)>
-<!ELEMENT vecteur (#PCDATA)>
-<!ELEMENT nb_patients (#PCDATA)>
+<!ATTLIST decede scale                  (france|departement|region) #REQUIRED >
+<!ATTLIST decede region                 (CDATA) #IMPLIED >
+<!ATTLIST decede global                 (CDATA) #IMPLIED >
 
 ]>

@@ -94,3 +94,15 @@ pour les transferts de patients:
     region d'arrivée
     pays d'arrivee
     nombre de patients.
+
+============================================================================================================
+============================================================================================================
+============================================================================================================
+
+Fonctionnalité a détailler:
+On va prendre la fonction de constitution de la base.
+On va avoir une BD pour les sources
+Un script va utiliser les sources pour récupérer les données sous différentes formes
+Si ce n'est pas du xml, on les convertit au format xml.
+Une fois que l'on a l'ensemble des fichiers, on les passe dans un agrégateur qui n'en fait plus qu'un seul fichier. 
+le fichier est horodaté, placé dans un dossier sur le serveur et son chemin de connexion est ajouté dans une autre BD.

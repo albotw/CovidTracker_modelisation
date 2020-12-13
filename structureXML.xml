@@ -1,66 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE structureXML SYSTEM "structureXML.dtd">
-<meta>
-
-    <departement></departement>
-    <date></date>
-
-</meta>
-
 <data>
+    <date>12/12/2020</date>
+
     <tests>
+        <localisation scale="region" region="FR-CVL">
+            <positifs>190</positifs>
+            <total>1400</total>
+        </localisation>
 
-        <total></total>
-        <taux></taux>
+        <localisation scale="france">
+            <positifs>54110</positifs>
+            <total>140000</total>
+        </localisation>
 
-        <hommes>
-            <total></total>
-            <positifs></positifs>
-        </hommes>
-
-        <femmes>
-            <total></total>
-            <positifs></positifs>
-        </femmes>
-
+        <localisation scale="departement" departement="58">
+            <positifs>400</positifs>
+            <total>1000</total>
+        </localisation>
     </tests>
 
     <hospitalises>
 
-        <total></total>
-        <nouveaux_cas></nouveaux_cas>
-
-        <reanimation tranche_age="18-25" region="45">
+        <reanimation scale="region" region="FR-ARA">
             <total>7600</total>
             <nouveaux>35</nouveaux>
         </reanimation>
 
-        <retour_domicile global="yes">
-            <total></total>
-            <nouveaux></nouveaux>
+        <retour_domicile scale="france">
+            <total>7800</total>
+            <nouveaux>40</nouveaux>
         </retour_domicile>
 
-        <decede>
+        <decede scale="departement" departement="21" >
             <total></total>
             <nouveaux></nouveaux>
         </decede>
 
     </hospitalises>
-
-    <transferts>
-
-        <depart>
-            <region></region>
-            <date></date>
-        </depart>
-
-        <arrivee>
-            <region></region>
-            <date></date>
-        </arrivee>
-
-        <vecteur></vecteur>
-        <nb_patients></nb_patients>
-
-    </transferts>
 </data>
